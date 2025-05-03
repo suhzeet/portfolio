@@ -8,8 +8,8 @@ import Logo from "@/app/assets/logo.png";
 
 function Navbar() {
   return (
-    <div className=" w-screen flex align-center justify-center text-white">
-      <nav className=" w-[80%] mt-2 flex items-center justify-between p-4 px-8 ">
+    <div className=" w-screen flex align-center justify-center text-white z-50">
+      <nav className=" w-[95%] lg:w-[85%] mt-2 flex items-center justify-between p-4 px-8 ">
         <a href="#" className="relative w-[58px] h-[72px]">
           <Image
             src={Logo}
@@ -18,7 +18,7 @@ function Navbar() {
             className=" rounded-xl shadow-xl object-cover"
           />
         </a>
-        <ul className="flex gap-12 py-4 px-16 text-2xl font-[500] shadow-2xl-white text-[#5e6271]">
+        <ul className="hidden md:flex md:text-xl gap-6 lg:gap-8 py-4 px-16 lg:text-2xl font-[500] shadow-2xl-white text-[#5e6271]">
           <li className=" hover:text-white text-white border-b-4 border-b-solid pb-1 border-b-[#ffc257]">
             <a href="#">Home</a>
           </li>
