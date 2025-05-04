@@ -31,8 +31,8 @@ function About() {
             projects.
           </p>
         </div>
-        <div className="w-[50%] text-white flex flex-col justify-center gap-6">
-          <h2 className="text-3xl font-bold text-[#ffc257] mb-4">Skills</h2>
+        <div className="w-[50%] text-white flex flex-col justify-center gap-6 px-18">
+          <h2 className="text-4xl font-bold text-[#ffc257] mb-4">Skills</h2>
 
           {[
             { name: "HTML", percent: 90 },
@@ -47,9 +47,9 @@ function About() {
                 <span>{skill.name}</span>
                 <span>{skill.percent}%</span>
               </div>
-              <div className="w-full bg-gray-400 rounded-full h-3">
+              <div className="w-full bg-gray-400 rounded-full h-2">
                 <div
-                  className="bg-[#c38926] h-3 rounded-full"
+                  className="bg-[#c38926] h-2 rounded-full"
                   style={{ width: `${skill.percent}%` }}
                 ></div>
               </div>
