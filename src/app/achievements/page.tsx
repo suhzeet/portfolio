@@ -1,13 +1,27 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn, fadeInUp, scaleIn, slideInLeft } from "@/utils/animations";
 
 const Achievements = () => {
   return (
     <div className="container max-w-6xl mx-auto py-20">
       <section>
-        <h1 className=" text-4xl font-semibold mb-8 ">Achievements</h1>
+        <motion.h1
+          {...slideInLeft}
+          transition={{ delay: 0.3, duration: 0.3 }}
+          className=" text-4xl font-semibold mb-8 "
+        >
+          Achievements
+        </motion.h1>
 
-        <ul className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.ul
+          {...slideInLeft}
+          transition={{ delay: 0.5, duration: 0.3 }}
+          className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {[
             {
               title: "Won Hackathon as 3rd, IS Hackathon 2024",
@@ -17,7 +31,7 @@ const Achievements = () => {
             {
               title: "Finalist, DeekHack Hackathon 2023",
               issuer: "DeerHack - DEERWALK",
-              image: "/deerhack.JPG",
+              image: "/deerhack.jpg",
             },
             {
               title: "Achievement loading...",
@@ -37,12 +51,24 @@ const Achievements = () => {
                 className=" rounded-t-lg hover:scale-102 duration-300"
               />
               <div className=" p-6">
-                <h3 className=" text-xl">{item.title}</h3>
-                <p className=" text-sm text-primary mt-2">{item.issuer}</p>
+                <motion.h3
+                  {...fadeInUp}
+                  transition={{ delay: 0.7, duration: 0.3 }}
+                  className=" text-xl"
+                >
+                  {item.title}
+                </motion.h3>
+                <motion.p
+                  {...fadeInUp}
+                  transition={{ delay: 0.8, duration: 0.3 }}
+                  className=" text-sm text-primary mt-2"
+                >
+                  {item.issuer}
+                </motion.p>
               </div>
             </li>
           ))}
-        </ul>
+        </motion.ul>
       </section>
     </div>
   );

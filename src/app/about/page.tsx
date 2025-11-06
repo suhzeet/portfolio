@@ -1,8 +1,12 @@
+"use client";
+
 import React from "react";
 import { BsGithub } from "react-icons/bs";
 import { DiMongodb } from "react-icons/di";
 import { FaCss3, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
+import { motion } from "framer-motion";
+import { fadeIn, scaleIn, slideInLeft, slideInRight } from "@/utils/animations";
 
 const About = () => {
   return (
@@ -10,12 +14,22 @@ const About = () => {
       <section className=" grid grid-cols-2 gap-24">
         {/* bio section */}
         <div>
-          <h1 className=" text-4xl font-semibold mb-8 ">Why hire me?</h1>
-          <p className=" text-lg mt-12 text-gray-200">
+          <motion.h1
+            {...slideInLeft}
+            transition={{ delay: 0.3, duration: 0.3 }}
+            className=" text-4xl font-semibold mb-8 "
+          >
+            Why hire me?
+          </motion.h1>
+          <motion.p
+            {...slideInLeft}
+            transition={{ delay: 0.4, duration: 0.3 }}
+            className=" text-lg mt-12 text-gray-200"
+          >
             Eager student and aspiring front-end developer, passionate about
             building clean, user-friendly websites and continuously learning new
             technologies.
-          </p>
+          </motion.p>
           <ul className=" grid grid-cols-2 gap-4 mt-8">
             {[
               {
@@ -44,8 +58,19 @@ const About = () => {
               },
             ].map((item, index) => (
               <li key={index} className="flex gap-4 items-center">
-                <h3 className=" text-sm text-gray-400  ">{item.title} </h3>
-                <p>{item.value} </p>
+                <motion.h3
+                  {...slideInLeft}
+                  transition={{ delay: 0.3, duration: 0.3 }}
+                  className=" text-sm text-gray-400  "
+                >
+                  {item.title}{" "}
+                </motion.h3>
+                <motion.p
+                  {...scaleIn}
+                  transition={{ delay: 0.5, duration: 0.3 }}
+                >
+                  {item.value}{" "}
+                </motion.p>
               </li>
             ))}
           </ul>
@@ -53,7 +78,13 @@ const About = () => {
 
         {/* skills section */}
         <div>
-          <h2 className="text-3xl font-semibold">My Skills</h2>
+          <motion.h2
+            {...slideInLeft}
+            transition={{ delay: 0.3, duration: 0.3 }}
+            className="text-3xl font-semibold"
+          >
+            My Skills
+          </motion.h2>
           {/* <p className=" mt-4 text-sm text-gray-400">
             These are the skills I have learned:
           </p> */}
@@ -72,13 +103,15 @@ const About = () => {
                 { icon: <DiMongodb className="text-5xl" />, name: "MongoDB" },
                 { icon: <FaNodeJs className="text-5xl" />, name: "Node.JS" },
               ].map((item, index) => (
-                <li
+                <motion.li
+                  {...scaleIn}
+                  transition={{ delay: 0.5, duration: 0.3 }}
                   key={index}
                   title={item.name}
                   className="flex flex-col justify-center items-center gap-1 hover:text-primary cursor-pointer transition-colors duration-400 bg-card-bg p-6 rounded-lg hover:scale-105 "
                 >
                   {item.icon}
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>

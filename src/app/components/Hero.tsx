@@ -1,5 +1,12 @@
 "use client";
 
+import {
+  fadeIn,
+  fadeInDown,
+  fadeInUp,
+  slideInLeft,
+  slideInRight,
+} from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,17 +20,35 @@ const Hero = () => {
     <section className="py-20 container max-w-6xl h-max-vh mx-auto ">
       <div className=" mx-auto text-center grid grid-cols-2 gap-12 items-center   ">
         <div className="  text-left">
-          <p className=" mb-4 text-gray-200 text-md">Web Developer</p>
-          <h1 className=" text-4xl md:text-6xl font-bold mb-8">
-            Hello I'm{" "}
+          <motion.p
+            {...fadeIn}
+            transition={{ delay: 0.4, duration: 0.3 }}
+            className=" mb-4 text-gray-200 text-md"
+          >
+            Web Developer
+          </motion.p>
+          <motion.h1
+            {...slideInLeft}
+            transition={{ delay: 0.3, duration: 0.3 }}
+            className=" text-4xl md:text-6xl font-bold mb-8"
+          >
+            Hello I&apos;m
             <span className="text-primary block mt-2">Sujit Neupane</span>
-          </h1>
-          <p className=" text-gray-300 text-sm mt-8">
+          </motion.h1>
+          <motion.p
+            {...fadeIn}
+            transition={{ delay: 0.4 }}
+            className=" text-gray-300 text-sm mt-8"
+          >
             Turning ideas into clean, functional code. Building digital
             experiences that just work.
-          </p>
+          </motion.p>
 
-          <div className=" flex justify-start items-center space-x-6 mt-8 ">
+          <motion.div
+            {...fadeInUp}
+            transition={{ delay: 0.6, duration: 0.4 }}
+            className=" flex justify-start items-center space-x-6 mt-8 "
+          >
             <Link
               href="/"
               className=" text-md px-8 py-2 rounded-2xl ring-1 ring-primary text-primary hover:bg-primary hover:text-dark transition-colors duration-300 "
@@ -54,10 +79,14 @@ const Hero = () => {
             >
               <FaXTwitter />
             </Link>
-          </div>
+          </motion.div>
         </div>
 
-        <div className=" flex justify-center items-center ">
+        <motion.div
+          {...slideInRight}
+          transition={{ delay: 0.3, duration: 0.3 }}
+          className=" flex justify-center items-center "
+        >
           <Image
             src="/profile.png"
             alt="profile image"
@@ -65,7 +94,7 @@ const Hero = () => {
             height={400}
             className=" rounded-full ring-2 ring-primary"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

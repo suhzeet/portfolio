@@ -1,11 +1,19 @@
 "use client";
 
-import { Preahvihear } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { motion } from "framer-motion";
+import {
+  cardHover,
+  fadeIn,
+  fadeInUp,
+  scaleIn,
+  slideInLeft,
+  slideInRight,
+} from "@/utils/animations";
 
 const Projects = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
@@ -73,18 +81,42 @@ const Projects = () => {
         <ul>
           <li key={currentProject.title} className=" grid grid-cols-2 h-100 ">
             <div className=" flex flex-col gap-8">
-              <p className=" text-6xl text-gray-200">
+              <motion.p
+                {...fadeIn}
+                transition={{ delay: 0.5, duration: 0.3 }}
+                className=" text-6xl text-gray-200"
+              >
                 {currentProject.number}{" "}
-              </p>
-              <h2 className=" text-3xl font-semibold">
+              </motion.p>
+              <motion.h2
+                {...slideInLeft}
+                transition={{ delay: 0.3, duration: 0.3 }}
+                className=" text-3xl font-semibold"
+              >
                 {currentProject.title}{" "}
-              </h2>
-              <p className=" text-md text-gray-400">
+              </motion.h2>
+              <motion.p
+                {...slideInLeft}
+                transition={{ delay: 0.3, duration: 0.3 }}
+                className=" text-md text-gray-400"
+              >
                 {currentProject.description}{" "}
-              </p>
-              <p className=" text-primary"> {currentProject.technologies} </p>
-              <hr className=" text-gray-600 border-1 " />
-              <div className=" flex gap-6 items-center justify-start">
+              </motion.p>
+              <motion.div
+                {...fadeIn}
+                transition={{ delay: 0.5, duration: 0.3 }}
+              >
+                <p className=" text-primary mb-8">
+                  {" "}
+                  {currentProject.technologies}{" "}
+                </p>
+                <hr className=" text-gray-600 border " />
+              </motion.div>
+              <motion.div
+                {...fadeInUp}
+                transition={{ delay: 0.5, duration: 0.4 }}
+                className=" flex gap-6 items-center justify-start"
+              >
                 <Link
                   href={currentProject.livedemo}
                   title="Live Demo"
@@ -101,9 +133,13 @@ const Projects = () => {
                 >
                   <FaGithub />
                 </Link>
-              </div>
+              </motion.div>
             </div>
-            <div className=" pr-8 overflow-hidden ">
+            <motion.div
+              {...slideInRight}
+              transition={{ delay: 0.3, duration: 0.3 }}
+              className=" pr-8 overflow-hidden "
+            >
               <Image
                 src={currentProject.image}
                 alt="sidejobs screenshot"
@@ -111,10 +147,14 @@ const Projects = () => {
                 height={600}
                 className=" w-full h-full object-cover rounded-sm hover:scale-102 duration-300 "
               />
-            </div>
+            </motion.div>
           </li>
         </ul>
-        <div className="flex gap-2 justify-end items-center mt-4 pr-8">
+        <motion.div
+          {...fadeIn}
+          transition={{ delay: 0.5, duration: 0.3 }}
+          className="flex gap-2 justify-end items-center mt-4 pr-8"
+        >
           <button
             onClick={goToPreviousProject}
             title="Previous project"
@@ -129,7 +169,7 @@ const Projects = () => {
           >
             <IoIosArrowForward />
           </button>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

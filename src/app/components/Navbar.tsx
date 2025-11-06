@@ -11,6 +11,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
+import { motion } from "framer-motion";
+import { fadeIn, slideInLeft, slideInRight } from "@/utils/animations";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -31,12 +33,21 @@ const Navbar = () => {
     <nav className=" fixed w-full  backdrop-blur-sm z-50">
       <div className="container max-w-7xl mx-auto p-4 ">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-4xl font-extrabold text-primary">
-            sujit<span className="text-white">.</span>
-          </Link>
+          <motion.div
+            {...slideInLeft}
+            transition={{ delay: 0.1, duration: 0.3 }}
+          >
+            <Link href="/" className="text-4xl font-extrabold text-primary">
+              sujit<span className="text-white">.</span>
+            </Link>
+          </motion.div>
 
           {/* desktop menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <motion.div
+            {...slideInRight}
+            transition={{ delay: 0.1, duration: 0.3 }}
+            className="hidden md:flex items-center space-x-8"
+          >
             {menuItems.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -63,7 +74,7 @@ const Navbar = () => {
                 <MoonIcon className="w-8 h-8" />
               )}
             </button> */}
-          </div>
+          </motion.div>
 
           {/* mobile menu botton */}
           <button

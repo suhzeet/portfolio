@@ -4,6 +4,8 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import { FaLocationPin } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { scaleIn, slideInLeft, slideInRight } from "@/utils/animations";
 
 interface FormData {
   name: string;
@@ -58,10 +60,19 @@ const Contact = () => {
     <div className=" container max-w-6xl py-6">
       <div className=" grid grid-cols-1 items-center md:grid-cols-2 gap-12 pr-8">
         {/* contact info */}
-        <div className=" space-y-8 pl-18">
+        <motion.div
+          {...slideInLeft}
+          transition={{ delay: 0.3, duration: 0.3 }}
+          className=" space-y-8 pl-18"
+        >
           <div className=" space-y-6 mt-6">
             <div className=" flex items-center gap-4">
-              <FaPhone className="text-4xl text-primary bg-card-bg p-2 rounded-lg" />
+              <motion.div
+                {...scaleIn}
+                transition={{ delay: 0.5, duration: 0.3 }}
+              >
+                <FaPhone className="text-4xl text-primary bg-card-bg p-2 rounded-lg" />
+              </motion.div>
               <div>
                 <h3 className=" font-semibold">Phone</h3>
                 <Link
@@ -73,7 +84,12 @@ const Contact = () => {
               </div>
             </div>
             <div className=" flex items-center gap-4">
-              <FaEnvelope className=" text-4xl text-primary bg-card-bg p-2 rounded-lg" />
+              <motion.div
+                {...scaleIn}
+                transition={{ delay: 0.5, duration: 0.3 }}
+              >
+                <FaEnvelope className=" text-4xl text-primary bg-card-bg p-2 rounded-lg" />
+              </motion.div>
               <div>
                 <h3 className=" font-semibold">Email</h3>
                 <Link
@@ -85,7 +101,13 @@ const Contact = () => {
               </div>
             </div>
             <div className=" flex items-center gap-4">
-              <FaLocationPin className="text-4xl text-primary bg-card-bg p-2 rounded-lg" />
+              <motion.div
+                {...scaleIn}
+                transition={{ delay: 0.5, duration: 0.3 }}
+              >
+                {" "}
+                <FaLocationPin className="text-4xl text-primary bg-card-bg p-2 rounded-lg" />
+              </motion.div>
               <div>
                 <h3 className=" font-semibold">Location</h3>
                 <p className=" text-gray-400 hover:text-primary">
@@ -94,13 +116,17 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* contact */}
-        <div className=" bg-card-bg rounded-md min-h-130 p-6">
+        <motion.div
+          {...slideInRight}
+          transition={{ delay: 0.3, duration: 0.3 }}
+          className=" bg-card-bg rounded-md min-h-130 p-6"
+        >
           <h2 className=" text-3xl font-semibold text-primary">Get in Touch</h2>
           <p className=" text-gray-400 w-2/3 md:w-full mb-6 mt-4 text-sm">
-            I'm always open to discussing new projects, creative ideas, or
+            I&apos;m always open to discussing new projects, creative ideas, or
             opportunities to be part of your visions.
           </p>
           <form onSubmit={handleSubmit} action="" className=" space-y-6">
@@ -158,12 +184,14 @@ const Contact = () => {
                 className="w-full px-4 py-2 rounded-md outline-none  bg-dark focus:ring-1 focus:ring-primary focus:border-none placeholder:text-gray-500 "
               />
             </div>
-            <button
+            <motion.button
+              {...scaleIn}
+              transition={{ delay: 0.5, duration: 0.3 }}
               type="submit"
               className="  btn btn-primary text-black cursor-pointer "
             >
               {status === "loading" ? "Sending..." : "Send message"}
-            </button>
+            </motion.button>
 
             {status === "success" && (
               <p className=" ml-6 inline text-green-500 text-center text-sm">
@@ -177,7 +205,7 @@ const Contact = () => {
               </p>
             )}
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
