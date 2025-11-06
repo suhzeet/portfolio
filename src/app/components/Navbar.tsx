@@ -23,16 +23,16 @@ const Navbar = () => {
   const menuItems = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
+    { href: "/achievements", label: "Achievements" },
     { href: "/projects", label: "Projects" },
-    { href: "/blogs", label: "Blogs" },
     { href: "/contact", label: "Contact" },
   ];
   return (
     <nav className=" fixed w-full  backdrop-blur-sm z-50">
-      <div className="container max-w-7xl mx-auto px-4">
+      <div className="container max-w-7xl mx-auto p-4 ">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-4xl font-extrabold text-primary">
-            sujit.
+            sujit<span className="text-white">.</span>
           </Link>
 
           {/* desktop menu */}
@@ -43,15 +43,17 @@ const Navbar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-2xl font-semibold border-b-6 border-collapse rounded-sm hover:border-primary transition-color ${
-                    isActive ? " border-primary" : "border-transparent"
+                  className={`text-xl font-semibold border-b-2 pb-1 border-collapse hover:text-primary transition-color ${
+                    isActive
+                      ? " border-primary text-primary"
+                      : "border-transparent"
                   }`}
                 >
                   {item.label}
                 </Link>
               );
             })}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className=" p-2 rounded-lg dark:text-white hover:bg-gray-100 hover:text-primary dark:hover:bg-gray-500 transition-colors cursor-pointer"
             >
@@ -60,7 +62,7 @@ const Navbar = () => {
               ) : (
                 <MoonIcon className="w-8 h-8" />
               )}
-            </button>
+            </button> */}
           </div>
 
           {/* mobile menu botton */}
@@ -91,7 +93,7 @@ const Navbar = () => {
                 </div>
               ))}
 
-              <div>
+              {/* <div>
                 <button
                   onClick={toggleTheme}
                   className=" flex text-xl font-semibold items-center py-2 hover:text-primary transition-colors"
@@ -106,7 +108,7 @@ const Navbar = () => {
                     </>
                   )}
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         )}

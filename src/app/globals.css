@@ -2,16 +2,25 @@
 
 @theme {
   --color-primary: #ffaf29;
-  --color-secondary: #424657;
-  --color-dark: #242734;
+  --color-secondary: #1c1b22;
+  --color-dark: #1c1b22;
   --color-light: #323647;
   --color-text: #ffffff;
-  --color-bg: #242734;
+  --color-bg: #1c1b22;
+  --color-card-bg: #232229;
 
-  --font-sans: "Inter", sans-serif;
+  --font-jetbrainsMono: "JetBrains Mono", sans-serif;
 
   --animation-fade-in: fadeIn 0.5s ease-in-out;
   --animation-slide-up: slideUp 0.5s ease-in-out;
+}
+
+:root {
+  --font-jetbrains-mono: "JetBrains Mono";
+}
+
+body {
+  font-family: var(--font-jetbrains-mono), monospace;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
