@@ -6,12 +6,12 @@ import { DiMongodb } from "react-icons/di";
 import { FaCss3, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { motion } from "framer-motion";
-import { fadeIn, scaleIn, slideInLeft, slideInRight } from "@/utils/animations";
+import { scaleIn, slideInLeft } from "@/utils/animations";
 
 const About = () => {
   return (
-    <div className="container max-w-6xl mx-auto py-20">
-      <section className=" grid grid-cols-2 gap-24">
+    <div className="container max-w-6xl mx-auto py-12 md:pb-20 md:py-20">
+      <section className=" grid grid-cols-1 lg:grid-cols-2 gap-24">
         {/* bio section */}
         <div>
           <motion.h1
@@ -30,7 +30,7 @@ const About = () => {
             building clean, user-friendly websites and continuously learning new
             technologies.
           </motion.p>
-          <ul className=" grid grid-cols-2 gap-4 mt-8">
+          <ul className=" grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
             {[
               {
                 title: "Name",

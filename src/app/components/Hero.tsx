@@ -17,9 +17,9 @@ import { FiDownload } from "react-icons/fi";
 
 const Hero = () => {
   return (
-    <section className="py-20 container max-w-6xl h-max-vh mx-auto ">
-      <div className=" mx-auto text-center grid grid-cols-2 gap-12 items-center   ">
-        <div className="  text-left">
+    <section className=" py-8 sm:py-20 container max-w-6xl h-max-vh mx-auto ">
+      <div className=" mx-auto text-center grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 items-center   ">
+        <div className=" text-center sm:text-left order-2 sm:order-1">
           <motion.p
             {...fadeIn}
             transition={{ delay: 0.4, duration: 0.3 }}
@@ -30,7 +30,7 @@ const Hero = () => {
           <motion.h1
             {...slideInLeft}
             transition={{ delay: 0.3, duration: 0.3 }}
-            className=" text-4xl md:text-6xl font-bold mb-8"
+            className=" text-4xl md:text-5xl lg:text-6xl font-bold mb-8"
           >
             Hello I&apos;m
             <span className="text-primary block mt-2">Sujit Neupane</span>
@@ -47,45 +47,49 @@ const Hero = () => {
           <motion.div
             {...fadeInUp}
             transition={{ delay: 0.6, duration: 0.4 }}
-            className=" flex justify-start items-center space-x-6 mt-8 "
+            className=" flex flex-row sm:flex-col md:flex-row justify-start items-center sm:items-start md:items-center gap-6 mt-8 "
           >
-            <Link
-              href="/"
-              className=" text-md px-8 py-2 rounded-2xl ring-1 ring-primary text-primary hover:bg-primary hover:text-dark transition-colors duration-300 "
-            >
-              Download CV <FiDownload className=" inline" />
-            </Link>
-            <Link
-              href="/"
-              className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
-            >
-              <FaGithub />
-            </Link>
-            <Link
-              href="/"
-              className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
-            >
-              <FaLinkedin />
-            </Link>
-            <Link
-              href="/"
-              className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
-            >
-              <FaInstagram />
-            </Link>
-            <Link
-              href="/"
-              className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
-            >
-              <FaXTwitter />
-            </Link>
+            <div>
+              <Link
+                href="/"
+                className=" text-md px-8 py-2 rounded-2xl ring-1 ring-primary text-primary hover:bg-primary hover:text-dark transition-colors duration-300 block  "
+              >
+                Download CV <FiDownload className=" inline" />
+              </Link>
+            </div>
+            <div className=" flex justify-start items-center space-x-6 ">
+              <Link
+                href="/"
+                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
+              >
+                <FaGithub />
+              </Link>
+              <Link
+                href="/"
+                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
+              >
+                <FaLinkedin />
+              </Link>
+              <Link
+                href="/"
+                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
+              >
+                <FaInstagram />
+              </Link>
+              <Link
+                href="/"
+                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
+              >
+                <FaXTwitter />
+              </Link>
+            </div>
           </motion.div>
         </div>
 
         <motion.div
           {...slideInRight}
           transition={{ delay: 0.3, duration: 0.3 }}
-          className=" flex justify-center items-center "
+          className=" flex justify-center items-center h-64 w-64 md:h-84 md:w-84 lg:h-96 lg:w-96 mx-auto order-1 sm:order-2 "
         >
           <Image
             src="/profile.png"

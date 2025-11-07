@@ -7,12 +7,12 @@ import { fadeIn, fadeInUp, scaleIn, slideInLeft } from "@/utils/animations";
 
 const Achievements = () => {
   return (
-    <div className="container max-w-6xl mx-auto py-20">
+    <div className="container max-w-6xl mx-auto py-12 md:py-20">
       <section>
         <motion.h1
           {...slideInLeft}
           transition={{ delay: 0.3, duration: 0.3 }}
-          className=" text-4xl font-semibold mb-8 "
+          className=" text-4xl text-center md:text-left font-semibold mb-8 "
         >
           Achievements
         </motion.h1>
@@ -26,7 +26,7 @@ const Achievements = () => {
             {
               title: "Won Hackathon as 3rd, IS Hackathon 2024",
               issuer: "IS CLUB - KUSOM",
-              image: "/isHackathon.JPG",
+              image: "/isHack.JPG",
             },
             {
               title: "Finalist, DeekHack Hackathon 2023",
@@ -41,7 +41,7 @@ const Achievements = () => {
           ].map((item, index) => (
             <li
               key={index}
-              className=" flex flex-col  bg-card-bg   rounded-lg cursor-pointer hover:scale-102 duration-300 overflow-hidden "
+              className=" max-w-[400px] flex flex-col mx-auto   bg-card-bg   rounded-lg cursor-pointer hover:scale-102 duration-300 overflow-hidden "
             >
               <Image
                 src={item.image}

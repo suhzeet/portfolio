@@ -76,22 +76,25 @@ const Projects = () => {
   };
 
   return (
-    <div className=" container max-w-6xl mx-auto py-20">
+    <div className=" container max-w-6xl mx-auto py-12 md:py-20">
       <section>
         <ul>
-          <li key={currentProject.title} className=" grid grid-cols-2 h-100 ">
-            <div className=" flex flex-col gap-8">
+          <li
+            key={currentProject.title}
+            className=" grid grid-cols-1 lg:grid-cols-2 h-100 "
+          >
+            <div className=" flex flex-col text-left mx-auto lg:text-left gap-8 min-w-[400px] sm:min-w-[500px] max-w-[550px]">
               <motion.p
                 {...fadeIn}
                 transition={{ delay: 0.5, duration: 0.3 }}
-                className=" text-6xl text-gray-200"
+                className=" text-5xl sm:text-6xl text-gray-200"
               >
                 {currentProject.number}{" "}
               </motion.p>
               <motion.h2
                 {...slideInLeft}
                 transition={{ delay: 0.3, duration: 0.3 }}
-                className=" text-3xl font-semibold"
+                className=" text-2xl sm:text-3xl font-semibold"
               >
                 {currentProject.title}{" "}
               </motion.h2>
@@ -121,7 +124,7 @@ const Projects = () => {
                   href={currentProject.livedemo}
                   title="Live Demo"
                   target="_blank"
-                  className=" text-2xl p-4 bg-card-bg rounded-full hover:text-primary duration-300 "
+                  className="text-xl sm:text-2xl p-3 sm:p-4 bg-card-bg rounded-full hover:text-primary duration-300 "
                 >
                   <FaExternalLinkAlt />
                 </Link>
@@ -129,7 +132,7 @@ const Projects = () => {
                   href={currentProject.github}
                   title="GitHub repository"
                   target="_blank"
-                  className=" text-2xl p-4 bg-card-bg rounded-full hover:text-primary  duration-300"
+                  className=" text-xl sm:text-2xl p-3 sm:p-4 bg-card-bg rounded-full hover:text-primary  duration-300"
                 >
                   <FaGithub />
                 </Link>
@@ -138,7 +141,7 @@ const Projects = () => {
             <motion.div
               {...slideInRight}
               transition={{ delay: 0.3, duration: 0.3 }}
-              className=" pr-8 overflow-hidden "
+              className=" pr-8 overflow-hidden max-w-[550px] min-w-[500px] "
             >
               <Image
                 src={currentProject.image}
@@ -153,7 +156,7 @@ const Projects = () => {
         <motion.div
           {...fadeIn}
           transition={{ delay: 0.5, duration: 0.3 }}
-          className="flex gap-2 justify-end items-center mt-4 pr-8"
+          className="flex gap-2 justify-center lg:justify-end lg:items-center mt-4 pr-8"
         >
           <button
             onClick={goToPreviousProject}
