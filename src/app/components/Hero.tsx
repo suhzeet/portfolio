@@ -51,7 +51,8 @@ const Hero = () => {
           >
             <div>
               <Link
-                href="/"
+                href="/sujit_resume.pdf"
+                target="_blank"
                 className=" text-md px-8 py-2 rounded-2xl ring-1 ring-primary text-primary hover:bg-primary hover:text-dark transition-colors duration-300 block  "
               >
                 Download CV <FiDownload className=" inline" />
@@ -59,25 +60,29 @@ const Hero = () => {
             </div>
             <div className=" flex justify-start items-center space-x-6 ">
               <Link
-                href="/"
+                href="https://github.com/suhzeet"
+                target="_blank"
                 className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
               >
                 <FaGithub />
               </Link>
               <Link
-                href="/"
+                href="https://www.linkedin.com/in/sujitneupane2002/"
+                target="_blank"
                 className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
               >
                 <FaLinkedin />
               </Link>
               <Link
-                href="/"
+                href="https://www.instagram.com/sujitneupane.47/"
+                target="_blank"
                 className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
               >
                 <FaInstagram />
               </Link>
               <Link
-                href="/"
+                href="https://x.com/suhzeet"
+                target="_blank"
                 className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
               >
                 <FaXTwitter />
