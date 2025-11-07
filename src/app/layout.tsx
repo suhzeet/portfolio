@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetbrainsMono.variable} antialiased bg-white transition-colors dark:bg-bg dark:text-white`}
+        className={`${jetbrainsMono.variable} antialiased transition-colors bg-bg text-white`}
       >
         <ThemeProvider>
           <Navbar />
