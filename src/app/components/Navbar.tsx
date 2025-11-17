@@ -1,18 +1,13 @@
 "use client";
 
-import {
-  Bars3Icon,
-  MoonIcon,
-  SunIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { div } from "framer-motion/client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { motion } from "framer-motion";
-import { fadeIn, slideInLeft, slideInRight } from "@/utils/animations";
+import { slideInLeft, slideInRight } from "@/utils/animations";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();

@@ -2,7 +2,6 @@
 
 import {
   fadeIn,
-  fadeInDown,
   fadeInUp,
   slideInLeft,
   slideInRight,

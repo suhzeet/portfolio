@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn, fadeInUp, scaleIn, slideInLeft } from "@/utils/animations";
+import { fadeInUp, slideInLeft } from "@/utils/animations";
 
 const Achievements = () => {
   return (
