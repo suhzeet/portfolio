@@ -34,9 +34,9 @@ const Achievements = () => {
               image: "/deerhack.jpg",
             },
             {
-              title: "Achievement loading...",
-              issuer: "",
-              image: "/",
+              title: "Achieved 100+ wpm typing speed",
+              issuer: "monkeytype",
+              image: "/monkeyType.png",
             },
           ].map((item, index) => (
             <li
