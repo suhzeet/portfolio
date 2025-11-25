@@ -50,7 +50,7 @@ const Hero = () => {
           >
             <div>
               <Link
-                href="/sujit_resume.pdf"
+                href="/sujit-neupane-resume.pdf"
                 target="_blank"
                 className=" text-md px-8 py-2 rounded-2xl ring-1 ring-primary text-primary hover:bg-primary hover:text-dark transition-colors duration-300 block  "
               >
