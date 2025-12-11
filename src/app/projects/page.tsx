@@ -31,26 +31,6 @@ const Projects = () => {
     },
     {
       number: "02",
-      title: "Omnifood - Food Platform",
-      description:
-        "A sleek, responsive landing page for a premium food delivery service. Built with pure HTML, CSS, and JS for optimal performance and a seamless user experience.",
-      technologies: "HTML, CSS, JS",
-      livedemo: "https://omnifood-suhzeet.netlify.app/",
-      github: "https://github.com/suhzeet/omnifood-suhzeet",
-      image: "/omnifood.png",
-    },
-    {
-      number: "03",
-      title: "Guess a Number Game",
-      description:
-        "A fun and interactive browser-based game where players guess a secret number. Features instant feedback, a score-tracking system, and a high-score leaderboard.",
-      technologies: "HTML, CSS, JS",
-      livedemo: "https://suhzeet.github.io/guess-a-number/",
-      github: "https://github.com/suhzeet/guess-a-number",
-      image: "/guessNumber.png",
-    },
-    {
-      number: "04",
       title: "To-Do List App",
       description:
         "A sleek and efficient React.js to-do application for managing daily tasks. Add, edit, delete, and mark tasks as complete to boost your productivity.",
@@ -58,6 +38,28 @@ const Projects = () => {
       livedemo: "https://todo-list-suhzeet.netlify.app/",
       github: "https://github.com/suhzeet/To-Do-List",
       image: "/todoList.png",
+    },
+    {
+      number: "03",
+      title: "Aakashwani - Weather App",
+
+      description:
+        "A real-time weather application providing accurate forecasts for any location worldwide. Features dynamic UI updates, temperature and condition insights.",
+      technologies: "HTML, CSS, JS",
+      livedemo: "https://aakashvani-suzeet.netlify.app/",
+      github: "https://github.com/suhzeet/Aakashvani",
+      image: "/aakashvani.png",
+    },
+
+    {
+      number: "04",
+      title: "Guess a Number Game",
+      description:
+        "A fun and interactive browser-based game where players guess a secret number. Features instant feedback, a score-tracking system, and a high-score leaderboard.",
+      technologies: "HTML, CSS, JS",
+      livedemo: "https://suhzeet.github.io/guess-a-number/",
+      github: "https://github.com/suhzeet/guess-a-number",
+      image: "/guessNumber.png",
     },
   ];
 
