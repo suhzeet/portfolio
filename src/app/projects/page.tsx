@@ -41,7 +41,7 @@ const Projects = () => {
     },
     {
       number: "03",
-      title: "Aakashwani - Weather App",
+      title: "Aakashvani - Weather App",
 
       description:
         "A real-time weather application providing accurate forecasts for any location worldwide. Features dynamic UI updates, temperature and condition insights.",
