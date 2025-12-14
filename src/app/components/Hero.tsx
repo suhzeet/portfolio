@@ -46,43 +46,51 @@ const Hero = () => {
           <motion.div
             {...fadeInUp}
             transition={{ delay: 0.6, duration: 0.4 }}
-            className=" flex flex-row sm:flex-col md:flex-row justify-start items-center sm:items-start md:items-center gap-6 mt-8 "
+            className=" flex flex-row sm:flex-col md:flex-row justify-center sm:justify-start items-center sm:items-start md:items-center gap-6 mt-8 "
           >
             <div>
               <Link
                 href="/sujit-neupane-resume.pdf"
                 target="_blank"
-                className=" text-md px-8 py-2 rounded-2xl ring-1 ring-primary text-primary hover:bg-primary hover:text-dark transition-colors duration-300 block  "
+                className=" text-md px-6 py-1 rounded-xl ring-1 ring-primary text-primary hover:bg-primary hover:text-dark hover:scale-105 transition-colors duration-300 block  "
               >
-                Download CV <FiDownload className=" inline" />
+                {/* Mobile */}
+                <span className="inline sm:hidden md:inline lg:hidden">
+                  CV <FiDownload className="inline ml-1" />
+                </span>
+
+                {/* Tablet & Desktop */}
+                <span className="hidden sm:inline md:hidden lg:inline">
+                  Download CV <FiDownload className="inline ml-1" />
+                </span>
               </Link>
             </div>
             <div className=" flex justify-start items-center space-x-6 ">
               <Link
                 href="https://github.com/suhzeet"
                 target="_blank"
-                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
+                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300  hover:scale-110 "
               >
                 <FaGithub />
               </Link>
               <Link
                 href="https://www.linkedin.com/in/sujitneupane2002/"
                 target="_blank"
-                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
+                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300  hover:scale-110"
               >
                 <FaLinkedin />
               </Link>
               <Link
                 href="https://www.instagram.com/sujitneupane.47/"
                 target="_blank"
-                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
+                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300  hover:scale-110"
               >
                 <FaInstagram />
               </Link>
               <Link
                 href="https://x.com/suhzeet"
                 target="_blank"
-                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300 "
+                className=" text-md  text-primary  rounded-full ring-1 ring-primary hover:bg-primary hover:text-dark p-2 transition-colors duration-300  hover:scale-110"
               >
                 <FaXTwitter />
               </Link>

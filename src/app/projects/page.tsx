@@ -7,10 +7,8 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { motion } from "framer-motion";
 import {
-  cardHover,
   fadeIn,
   fadeInUp,
-  scaleIn,
   slideInLeft,
   slideInRight,
 } from "@/utils/animations";
@@ -37,7 +35,7 @@ const Projects = () => {
       technologies: "HTML, CSS, JS, React.JS",
       livedemo: "https://todo-list-suhzeet.netlify.app/",
       github: "https://github.com/suhzeet/To-Do-List",
-      image: "/todoList.png",
+      image: "/ToDoList.png",
     },
     {
       number: "03",
@@ -48,7 +46,7 @@ const Projects = () => {
       technologies: "HTML, CSS, JS",
       livedemo: "https://aakashvani-suzeet.netlify.app/",
       github: "https://github.com/suhzeet/Aakashvani",
-      image: "/aakashvani.png",
+      image: "/Aakashvani.png",
     },
 
     {
@@ -78,14 +76,14 @@ const Projects = () => {
   };
 
   return (
-    <div className=" container max-w-6xl mx-auto py-12 md:py-20">
+    <div className=" container max-w-6xl mx-auto py-8 md:py-20">
       <section>
         <ul>
           <li
             key={currentProject.title}
             className=" grid grid-cols-1 lg:grid-cols-2 h-100 "
           >
-            <div className=" flex flex-col text-left mx-auto lg:text-left gap-8 min-w-[400px] sm:min-w-[500px] max-w-[550px]">
+            <div className=" flex flex-col text-left mx-auto lg:text-left gap-8 min-w-[350px] sm:min-w-[500px] max-w-[550px]">
               <motion.p
                 {...fadeIn}
                 transition={{ delay: 0.5, duration: 0.3 }}
@@ -143,14 +141,14 @@ const Projects = () => {
             <motion.div
               {...slideInRight}
               transition={{ delay: 0.3, duration: 0.3 }}
-              className=" pr-8 overflow-hidden max-w-[550px] min-w-[500px] "
+              className=" pr-8 hidden lg:inline overflow-hidden max-w-[550px] min-w-[500px] "
             >
               <Image
                 src={currentProject.image}
                 alt="sidejobs screenshot"
                 width={400}
                 height={600}
-                className=" w-full h-full object-cover rounded-sm hover:scale-102 duration-300 "
+                className=" w-full overflow-hidden h-full object-cover rounded-sm hover:scale-102 duration-300 "
               />
             </motion.div>
           </li>
@@ -158,7 +156,7 @@ const Projects = () => {
         <motion.div
           {...fadeIn}
           transition={{ delay: 0.5, duration: 0.3 }}
-          className="flex gap-2 justify-center lg:justify-end lg:items-center mt-4 pr-8"
+          className="flex gap-2 justify-end lg:items-center mt-2 sm:mt-4 pr-2 sm:pr-8"
         >
           <button
             onClick={goToPreviousProject}
