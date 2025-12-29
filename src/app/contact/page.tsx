@@ -58,12 +58,12 @@ const Contact = () => {
 
   return (
     <div className=" container max-w-6xl py-4 pb-8 lg:py-6">
-      <div className=" grid grid-cols-1 items-center md:grid-cols-2 gap-4 lg:gap-12 pr-4 lg:pr-8">
+      <div className=" grid grid-cols-1 items-center md:grid-cols-2 gap-4 lg:gap-12 pr-0 sm:pr-4 lg:pr-8">
         {/* contact info */}
         <motion.div
           {...slideInLeft}
           transition={{ delay: 0.3, duration: 0.3 }}
-          className=" space-y-8 pl-6 lg:pl-18 order-2 md:order-1 mx-auto"
+          className=" space-y-8 py-4 pb-12 sm:py-0 pl-0 sm:pl-6 lg:pl-18 order-2 md:order-1 mx-auto"
         >
           <div className=" space-y-6 mt-6">
             <div className=" flex items-center gap-4">
@@ -122,7 +122,7 @@ const Contact = () => {
         <motion.div
           {...slideInRight}
           transition={{ delay: 0.3, duration: 0.3 }}
-          className=" mx-auto bg-card-bg rounded-md min-h-130 p-6 min-w-[400px] max-w-[550px] order-1 md:order-2"
+          className=" mx-auto bg-card-bg rounded-md min-h-130 p-6 min-w-[300px] max-w-[400px] sm:max-w-[500px] order-1 md:order-2"
         >
           <h2 className=" text-3xl font-semibold text-primary">Get in Touch</h2>
           <p className=" text-gray-400 w-full mb-6 mt-4 text-sm">

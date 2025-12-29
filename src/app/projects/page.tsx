@@ -25,7 +25,8 @@ const Projects = () => {
       technologies: "React.JS, Node.JS, Express.JS, MongoDB",
       livedemo: "https://sidejobs.vercel.app/",
       github: "https://github.com/suhzeet/sideJobs-frontend",
-      image: "/sidejobs.png",
+      image: "/assets/images/sidejobs.png",
+      alt: "sidejobs screenshot",
     },
     {
       number: "02",
@@ -35,7 +36,8 @@ const Projects = () => {
       technologies: "HTML, CSS, JS, React.JS",
       livedemo: "https://todo-list-suhzeet.netlify.app/",
       github: "https://github.com/suhzeet/To-Do-List",
-      image: "/ToDoList.png",
+      image: "/assets/images/ToDoList.png",
+      alt: "to-do list app screenshot",
     },
     {
       number: "03",
@@ -46,7 +48,8 @@ const Projects = () => {
       technologies: "HTML, CSS, JS",
       livedemo: "https://aakashvani-suzeet.netlify.app/",
       github: "https://github.com/suhzeet/Aakashvani",
-      image: "/Aakashvani.png",
+      image: "/assets/images/Aakashvani.png",
+      alt: "aakashvani weather app screenshot",
     },
 
     {
@@ -57,7 +60,8 @@ const Projects = () => {
       technologies: "HTML, CSS, JS",
       livedemo: "https://suhzeet.github.io/guess-a-number/",
       github: "https://github.com/suhzeet/guess-a-number",
-      image: "/guessNumber.png",
+      image: "/assets/images/guessNumber.png",
+      alt: "guess a number game screenshot",
     },
   ];
 
@@ -145,7 +149,7 @@ const Projects = () => {
             >
               <Image
                 src={currentProject.image}
-                alt="sidejobs screenshot"
+                alt={currentProject.alt}
                 width={400}
                 height={600}
                 className=" w-full overflow-hidden h-full object-cover rounded-sm hover:scale-102 duration-300 "

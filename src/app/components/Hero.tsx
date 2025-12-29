@@ -50,7 +50,8 @@ const Hero = () => {
           >
             <div>
               <Link
-                href="/sujit-neupane-resume.pdf"
+                href="/assets/resume/sujit_neupane_resume.pdf"
+                rel="noopener noreferrer"
                 target="_blank"
                 className=" text-md px-6 py-1 rounded-xl ring-1 ring-primary text-primary hover:bg-primary hover:text-dark hover:scale-105 transition-colors duration-300 block  "
               >
@@ -104,7 +105,7 @@ const Hero = () => {
           className=" flex justify-center items-center h-64 w-64 md:h-84 md:w-84 lg:h-96 lg:w-96 mx-auto order-1 sm:order-2 "
         >
           <Image
-            src="/profile.png"
+            src="/assets/images/profile.png"
             alt="profile image"
             width={400}
             height={400}

@@ -26,17 +26,17 @@ const Achievements = () => {
             {
               title: "Won Hackathon as 3rd, IS Hackathon 2024",
               issuer: "IS CLUB - KUSOM",
-              image: "/isHack.JPG",
+              image: "/assets/images/isHack.JPG",
             },
             {
               title: "Finalist, DeekHack Hackathon 2023",
               issuer: "DeerHack - DEERWALK",
-              image: "/deerhack.jpg",
+              image: "/assets/images/deerhack.jpg",
             },
             {
               title: "Achieved 100+ wpm typing speed",
               issuer: "monkeytype",
-              image: "/monkeyType.png",
+              image: "/assets/images/monkeyType.png",
             },
           ].map((item, index) => (
             <li
