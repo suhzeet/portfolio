@@ -6,7 +6,7 @@ import {
   slideInLeft,
   slideInRight,
 } from "@/utils/animations";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -102,15 +102,43 @@ const Hero = () => {
         <motion.div
           {...slideInRight}
           transition={{ delay: 0.3, duration: 0.3 }}
-          className=" flex justify-center items-center h-64 w-64 md:h-84 md:w-84 lg:h-96 lg:w-96 mx-auto order-1 sm:order-2 "
+          className=" flex justify-center items-center h-64 w-64 md:h-84 md:w-84 lg:h-96 lg:w-96 mx-auto order-1 sm:order-2 relative"
         >
-          <Image
-            src="/assets/images/profile.png"
-            alt="profile image"
-            width={400}
-            height={400}
-            className=" rounded-full ring-2 ring-primary"
-          />
+          <motion.div
+            animate={{
+              scale: [1.1, 1, 1, 1.1],
+              rotate: [0, 90, 90, 0],
+              borderRadius: ["50%", "50%", "25%", "50%"],
+            }}
+            transition={{
+              delay: 1,
+              duration: 5,
+              ease: easeInOut,
+              repeat: Infinity,
+              repeatDelay: 1,
+            }}
+            className=" w-3/3 h-3/3  shadow-md ring-2 ring-primary overflow-hidden absolute inset-0"
+          >
+            <motion.div
+              animate={{ rotate: [0, -90, -90, 0], scale: [1, 1.1, 1.1, 1] }}
+              transition={{
+                delay: 1,
+                duration: 5,
+                ease: easeInOut,
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+              className="w-full h-full"
+            >
+              <Image
+                src="/assets/images/profile.png"
+                alt="profile image"
+                width={400}
+                height={400}
+                className="object-cover"
+              />
+            </motion.div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
