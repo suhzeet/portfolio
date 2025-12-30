@@ -106,7 +106,7 @@ const Hero = () => {
         >
           <motion.div
             animate={{
-              scale: [1.1, 1, 1, 1.1],
+              scale: [1, 0.9, 0.9, 1],
               rotate: [0, 90, 90, 0],
               borderRadius: ["50%", "50%", "25%", "50%"],
             }}
@@ -120,7 +120,7 @@ const Hero = () => {
             className=" w-3/3 h-3/3  shadow-md ring-2 ring-primary overflow-hidden absolute inset-0"
           >
             <motion.div
-              animate={{ rotate: [0, -90, -90, 0], scale: [1, 1.1, 1.1, 1] }}
+              animate={{ rotate: [0, -90, -90, 0], scale: [0.9, 1, 1, 0.9] }}
               transition={{
                 delay: 1,
                 duration: 5,
