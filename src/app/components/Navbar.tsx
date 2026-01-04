@@ -26,7 +26,7 @@ const Navbar = () => {
   ];
   return (
     <nav className=" fixed w-full  backdrop-blur-sm z-50">
-      <div className="container max-w-7xl mx-auto p-4 ">
+      <div className="container max-w-7xl mx-auto px-4 py-2 ">
         <div className="flex items-center justify-between h-16">
           <motion.div
             {...slideInLeft}
@@ -49,7 +49,7 @@ const Navbar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-xl font-semibold border-b-2 pb-1 border-collapse hover:text-primary transition-color ${
+                  className={`text-lg font-semibold border-b-3 pb-1 border-collapse hover:text-primary transition-color ${
                     isActive
                       ? " border-primary text-primary"
                       : "border-transparent"

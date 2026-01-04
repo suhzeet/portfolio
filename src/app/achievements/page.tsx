@@ -7,7 +7,10 @@ import { fadeInUp, slideInLeft } from "@/utils/animations";
 
 const Achievements = () => {
   return (
-    <div className="container max-w-6xl mx-auto py-12 md:py-20">
+    <div
+      id="achievements"
+      className="container max-w-6xl mx-auto py-12 md:py-20"
+    >
       <section>
         <motion.h1
           {...slideInLeft}

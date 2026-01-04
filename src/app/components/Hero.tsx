@@ -108,7 +108,7 @@ const Hero = () => {
             animate={{
               scale: [1, 0.9, 0.9, 1],
               rotate: [0, 90, 90, 0],
-              borderRadius: ["50%", "50%", "25%", "50%"],
+              borderRadius: ["50%", "50%", "20%", "50%"],
             }}
             transition={{
               delay: 1,
