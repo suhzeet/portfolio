@@ -10,7 +10,10 @@ import { scaleIn, slideInLeft } from "@/utils/animations";
 
 const About = () => {
   return (
-    <div className="container max-w-6xl mx-auto py-12 md:pb-20 md:py-20">
+    <div
+      id="about"
+      className="container  max-w-6xl mx-auto py-12 md:pb-20 md:py-20 flex items-center justify-center "
+    >
       <section className=" grid grid-cols-1 lg:grid-cols-2 gap-24">
         {/* bio section */}
         <div>
@@ -108,7 +111,7 @@ const About = () => {
                   transition={{ delay: 0.5, duration: 0.3 }}
                   key={index}
                   title={item.name}
-                  className="flex flex-col justify-center items-center gap-1 hover:text-primary cursor-pointer transition-colors duration-400 bg-card-bg p-6 rounded-lg hover:scale-105 "
+                  className="flex flex-col justify-center items-center gap-2 hover:text-primary cursor-pointer transition-colors duration-400 bg-card-bg p-6 rounded-lg hover:scale-105 "
                 >
                   {item.icon}
                 </motion.li>

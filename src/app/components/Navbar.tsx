@@ -19,10 +19,10 @@ const Navbar = () => {
 
   const menuItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/achievements", label: "Achievements" },
-    { href: "/projects", label: "Projects" },
-    { href: "/contact", label: "Contact" },
+    { href: "#about", label: "About" },
+    { href: "#achievements", label: "Achievements" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
   ];
   return (
     <nav className=" fixed w-full  backdrop-blur-sm z-50">
@@ -47,6 +47,7 @@ const Navbar = () => {
               const isActive = pathname === item.href;
               return (
                 <Link
+                  id={item.label}
                   key={item.href}
                   href={item.href}
                   className={`text-lg font-semibold border-b-3 pb-1 border-collapse hover:text-primary transition-color ${
@@ -59,16 +60,6 @@ const Navbar = () => {
                 </Link>
               );
             })}
-            {/* <button
-              onClick={toggleTheme}
-              className=" p-2 rounded-lg dark:text-white hover:bg-gray-100 hover:text-primary dark:hover:bg-gray-500 transition-colors cursor-pointer"
-            >
-              {theme === "dark" ? (
-                <SunIcon className="w-8 h-8" />
-              ) : (
-                <MoonIcon className="w-8 h-8" />
-              )}
-            </button> */}
           </motion.div>
 
           {/* mobile menu botton */}

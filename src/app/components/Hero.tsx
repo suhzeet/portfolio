@@ -117,7 +117,7 @@ const Hero = () => {
               repeat: Infinity,
               repeatDelay: 1,
             }}
-            className=" w-3/3 h-3/3  shadow-md ring-2 ring-primary overflow-hidden absolute inset-0"
+            className=" shadow-md ring-2 ring-primary overflow-hidden absolute inset-0"
           >
             <motion.div
               animate={{
@@ -131,7 +131,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatDelay: 1,
               }}
-              className="w-full h-full"
+              className="w-full h-full relative"
             >
               <Image
                 src="/assets/images/profile.png"

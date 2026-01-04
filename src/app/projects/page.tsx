@@ -80,7 +80,10 @@ const Projects = () => {
   };
 
   return (
-    <div className=" container max-w-6xl mx-auto py-8 md:py-20">
+    <div
+      id="projects"
+      className=" container  max-w-6xl mx-auto py-8 md:py-20 flex items-center justify-center "
+    >
       <section>
         <ul>
           <li
