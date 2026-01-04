@@ -9,7 +9,7 @@ const Achievements = () => {
   return (
     <div
       id="achievements"
-      className="container  max-w-6xl mx-auto py-12 md:py-20 flex items-center justify-center "
+      className="container  max-w-6xl mx-auto py-12 md:py-20 flex items-center justify-center scroll-mt-20"
     >
       <section>
         <motion.h1

@@ -17,7 +17,7 @@ import { FiDownload } from "react-icons/fi";
 const Hero = () => {
   return (
     <section className=" py-8 sm:py-20 container max-w-6xl h-max-vh mx-auto ">
-      <div className=" mx-auto text-center grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 items-center   ">
+      <div className=" mx-auto text-center grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 items-center scroll-m-0  ">
         <div className=" text-center sm:text-left order-2 sm:order-1">
           <motion.p
             {...fadeIn}

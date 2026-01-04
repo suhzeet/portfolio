@@ -59,7 +59,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className=" container max-w-6xl py-4 pb-8 lg:py-8 flex items-center justify-center "
+      className=" container max-w-6xl py-4 pb-6 lg:py-4 flex items-center justify-center  "
     >
       <div className=" grid grid-cols-1 items-center md:grid-cols-2 gap-4 lg:gap-12 pr-0 sm:pr-4 lg:pr-8">
         {/* contact info */}

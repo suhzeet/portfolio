@@ -19,6 +19,10 @@
   --font-jetbrains-mono: "JetBrains Mono";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-jetbrains-mono), monospace;
 }

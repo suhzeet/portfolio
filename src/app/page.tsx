@@ -6,7 +6,7 @@ import Projects from "./projects/page";
 
 export default function Home() {
   return (
-    <div className=" flex flex-col gap-8 mb-6">
+    <div className=" flex flex-col gap-8 mb-12">
       <Hero />
       <About />
       <Achievements />

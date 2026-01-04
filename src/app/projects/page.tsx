@@ -82,7 +82,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className=" container  max-w-6xl mx-auto py-8 md:py-20 flex items-center justify-center "
+      className=" container  max-w-6xl mx-auto py-8 md:py-20 flex items-center justify-center scroll-mt-20"
     >
       <section>
         <ul>

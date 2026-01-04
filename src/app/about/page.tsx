@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="container  max-w-6xl mx-auto py-12 md:pb-20 md:py-20 flex items-center justify-center "
+      className="container  max-w-6xl mx-auto py-12 md:pb-20 md:py-20 flex items-center justify-center scroll-mt-20"
     >
       <section className=" grid grid-cols-1 lg:grid-cols-2 gap-24">
         {/* bio section */}
@@ -92,7 +92,7 @@ const About = () => {
             These are the skills I have learned:
           </p> */}
           <div>
-            <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+            <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 ">
               {[
                 { icon: <FaHtml5 className="text-5xl" />, name: "HTML5" },
                 { icon: <FaCss3 className="text-5xl" />, name: "CSS3" },
