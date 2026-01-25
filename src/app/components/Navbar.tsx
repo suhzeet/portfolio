@@ -17,10 +17,10 @@ const Navbar = () => {
   // Section-based links (same page)
   const sectionItems = [
     { href: "/", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#achievements", label: "Achievements" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
+    { href: "/#about", label: "About" },
+    { href: "/#achievements", label: "Achievements" },
+    { href: "/#projects", label: "Projects" },
+    { href: "/#contact", label: "Contact" },
   ];
 
   // Route-based link

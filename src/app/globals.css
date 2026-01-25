@@ -21,10 +21,13 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
   font-family: var(--font-jetbrains-mono), monospace;
+  margin: 0;
+  padding: 0;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
